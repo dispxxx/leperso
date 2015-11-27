@@ -1,0 +1,25 @@
+<h2>Register</h2>
+<form action="?page=register" method="POST">
+	<fieldset>
+		<div class="row">
+			<div class="form-group col-xs-12 col-md-6">
+				<label for="username">Login</label>
+				<input type="text" class="form-control" name="register_login" id="register_login"
+					   placeholder="Compris entre 2 et 30 caractères" value="<?php if (isset($login)) {
+					echo htmlentities($username);
+				} ?>" required>
+			</div>
+			<div class="form-group col-xs-12 col-sm-6">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" name="register_password" id="register_password"
+					   placeholder="Compris entre 8 et 30 caractères" required>
+			</div>
+			<div class="form-group col-xs-12 col-sm-6">
+				<label for="password">Password repeat</label>
+				<input type="password" class="form-control" id="register_password_repeat"
+					   name="register_password_repeat" placeholder="Compris entre 8 et 30 caractères" required>
+			</div>
+		</div>
+	</fieldset>
+	<button type="submit" class="btn btn-default">Envoyer</button>
+</form>

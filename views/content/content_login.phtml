@@ -1,0 +1,12 @@
+<h2>Login</h2>
+<form  action="?page=login" method="post">
+	<div class="form-group">
+		<label for="login_login">Login</label>
+		<input type="text" class="form-control" name="login_login" id="login_login" placeholder="Login" value="<?php if(isset($login_login)){echo htmlentities($login_login);}?>">
+	</div>
+	<div class="form-group">
+		<label for="login_password">Mot de passe</label>
+		<input type="password" class="form-control" name="login_password" id="login_password" placeholder="Mot de passe">
+	</div>
+	<button type="submit" class="btn btn-default">Envoyer</button>
+</form>
