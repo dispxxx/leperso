@@ -5,7 +5,7 @@ session_start();
 
 
 // Initialize database
-$db = mysqli_connect('192.168.1.51', 'lechat', 'gochat', 'leperso');
+$db = mysqli_connect('localhost', 'root', '2501NUPP', 'leperso');
 
 if ($db === false)
 	die(mysqli_connect_error());
@@ -38,6 +38,14 @@ $handlers_user 		= array('create_article' => 'article', 'edit_article' => 'artic
 
 if (isset($_GET['page']))
 {
+	// Cannot be put in content_logout.php because header needs to be sent prior to any content
+	if ($_GET['page'] === 'logout')
+	{
+		session_destroy();
+		$_SESSION = array();
+		header('Location: ?page=articles');
+		exit;
+	}
 	if (in_array($_GET['page'], $access_public) && !isset($_SESSION['id']))
 	{
 		$page = $_GET['page'];

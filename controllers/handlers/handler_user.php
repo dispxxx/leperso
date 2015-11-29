@@ -17,7 +17,6 @@ if (isset($_GET['page']))
 			}
 			else if (is_string($res))
 			{
-				var_dump($errors);
 				$errors[] = $res;
 			}
 			else

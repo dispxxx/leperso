@@ -2,7 +2,9 @@
 	<div class="article-title col-xs-12">
 		<h2>
 			<?php echo htmlentities($article -> getTitle()) ?>
+			<?php if(isset($_SESSION['id'])) {?>
 			<a href="?page=edit_article&id=<?php echo $article -> getId() ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></a>
+			<?php } ?>
 		</h2>
 	</div>
 </div>

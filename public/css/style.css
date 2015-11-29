@@ -21,3 +21,6 @@ h2 .glyphicon {
 .container .text-muted {
 	margin: 20px 0;
 }
+.btn {
+	margin-bottom: 10px;
+}
