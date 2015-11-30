@@ -5,7 +5,7 @@ session_start();
 
 
 // Initialize database
-$db = mysqli_connect('localhost', 'root', '2501NUPP', 'leperso');
+$db = mysqli_connect('localhost', 'root', 'troiswa', 'leperso');
 
 if ($db === false)
 	die(mysqli_connect_error());
